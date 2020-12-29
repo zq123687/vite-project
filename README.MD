@@ -56,3 +56,7 @@ cnpm install vuex@next
 ## 配置vite设置
 
 在根目录下创建vite.config.ts
+
+## 安装less
+
+cnpm install less less-loader
