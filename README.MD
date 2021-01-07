@@ -60,3 +60,7 @@ cnpm install vuex@next
 ## 安装less
 
 cnpm install less less-loader
+
+## typescript中的声明文件
+
+[查看](https://blog.csdn.net/weixin_34357887/article/details/93163641)
