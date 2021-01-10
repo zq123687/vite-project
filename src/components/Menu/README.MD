@@ -25,7 +25,8 @@
 
 ### Menu API
 
-| 参数 | 说明 | 类型 | 默认值
+| 参数 | 说明 | 类型 | 默认值 |
+| ---- | --- | ---- | ----- |
 | default-open-keys | 默认展开的subMenu菜单项的key数组 | | 
 | default-selected-keys | 默认选中的菜单项key数组 | string[] | 
 | force-subMenu-render | 在子菜单展示之前就渲染进Dom | boolean | false
@@ -38,14 +39,16 @@
 
 ### Menu 事件
 
-| 事件名称 | 说明 | 回调参数
+| 事件名称 | 说明 | 回调参数 |
+| ---- | --- | ---- | ----- |
 | click | 点击Item调用此参数 | function ({ item, key, keyPath })
 | openChange | subMenu展开/关闭的回调 | function (openKeys: string[])
 | select | 被选中时调用 | function ({ item, key, selectedKeys })
 
 ### Item API
 
-| 参数 | 说明 | 类型 | 默认值
+| 参数 | 说明 | 类型 | 默认值 |
+| ---- | --- | ---- | ----- |
 | disabled | 是否禁用 | boolean | false
 | key | 唯一标识 | string | 
 | title | 设置收缩时展示的悬浮标题 | string | 
@@ -53,7 +56,8 @@
 ### SubMenu API 
 
 注: SubMenu 的子元素必须是Item 或者SubMenu
-| 参数 | 说明 | 类型 | 默认值
+| 参数 | 说明 | 类型 | 默认值 |
+| ---- | --- | ---- | ----- |
 | subClassName | 子菜单样式 | string | 
 | disabled | 是否禁用 | boolean | false
 | key | 唯一标识 | string | 
