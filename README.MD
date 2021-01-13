@@ -64,3 +64,5 @@ cnpm install less less-loader
 ## typescript中的声明文件
 
 [查看](https://blog.csdn.net/weixin_34357887/article/details/93163641)
+
+## 使用jsx [参考](https://github.com/vuejs/jsx-next/blob/dev/packages/babel-plugin-jsx/README-zh_CN.md)

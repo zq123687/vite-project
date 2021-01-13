@@ -1,25 +1,28 @@
 <template>
   <div>
-    <button @click="count++">count is: {{ count }}</button>
+    <vp-menu :menu="menu"></vp-menu>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, onMounted } from 'vue'
-import menu from '/@/mock/menudata'
+import { defineComponent, onMounted } from 'vue';
+import VpMenu from '../components/Menu/VpMenu.vue';
+import menu from '/@/mock/menudata';
 
-export default {
+export default defineComponent({
   name: 'Home',
-  setup () {
-    const count = ref(0)
+  components: {
+    VpMenu,
+  },
+  setup() {
 
     onMounted(() => {
-      console.log(menu, '数据')
-    })
+
+    });
 
     return {
-      count
-    }
-  }
-}
+      menu
+    };
+  },
+});
 </script>

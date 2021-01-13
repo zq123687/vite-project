@@ -1,3 +1,5 @@
+import { isArray } from "./is";
+
 /**
  * 根据类型生成26个字母
  * Generate 26 letters according to the type
@@ -24,16 +26,15 @@ export const letter = (caseType: 'upper' | 'lower'): string[] => {
  *
  * @param arr - A string or array to reorder
  */
-export function shuffle (arr: Array<any> | string): Array<any> {
-  let arr2_ = Object.assign([], arr);
-  let length = arr.length;
+export const shuffle = (arr: any[] | string): any[] | string => {
+  let arr2_: any[] = Object.assign([], arr);
+  let length: number = arr.length;
 
   for (let index: number = 0; index < length; index++) {
-    let index = Math.floor(Math.random() * (length--));
+    const index = Math.floor(Math.random() * (length--));
 
     [arr2_[index], arr2_[length]] = [arr2_[length], arr2_[index]];
   }
 
-  return arr2_
+  return isArray(arr) ? arr2_ : arr2_.join('')
 }
-

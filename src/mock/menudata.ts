@@ -7,8 +7,8 @@ const $hash = new Hash
 
 const module: string[] = ['新闻网站', '后台管理', '定制组件', '数据图表', '社区论坛', '学习笔记', '文件管理', '资源收藏']
 
-function repeat(index: number, subName?: string): Menu {
-  const name: string = subName ? module[index] + subName : module[index]
+function repeat(index: number, subName?: string, obj?: Menu): Menu {
+  const name: string = subName ? obj?.name + subName : module[index]
   const current: string = $hash.hash64(String(new Date) + name + 'mockjs-upknow');
 
   return {
@@ -22,7 +22,7 @@ while (++index < module.length) {
   const children: Menu[] = []
 
   for (let i: number = 0; i < Math.random() * 10; i++) {
-    children[i] = repeat(i, `子类${i}`)
+    children[i] = repeat(i, `子类${i}`, obj)
     children[i].ParentId = obj.Id
   }
 
